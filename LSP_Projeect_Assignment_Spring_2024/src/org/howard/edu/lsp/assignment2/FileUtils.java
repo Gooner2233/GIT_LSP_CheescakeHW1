@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 public class FileUtils {
     public static String readTxtToString() {
         // relative path to the "words.txt" file
-        String wordsPath = "\\src\\org\\howard\\edu\\lsp\\assignment2\\words.txt";
+        String wordsPath = "/src/org/howard/edu/lsp/assignment2/words.txt";
 
         // Get the cd and construct relative path
         String currentDirectory = System.getProperty("user.dir");
