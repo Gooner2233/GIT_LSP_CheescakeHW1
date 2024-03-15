@@ -1,6 +1,16 @@
 package org.howard.edu.lsp.midterm.question1;
 
+/**
+ * Security class for SecurityOps (index-based encryption).
+ */
 public class SecurityOps {
+    
+    /**
+     * Returns the encrypted message based on the even and odd placing of letters in the input text.
+     *
+     * @param text the text to be encrypted
+     * @return the encrypted message
+     */
     public static String encrypt(String text) {
         // Remove whitespace and punctuation characters
         String cleanText = text.replaceAll("[\\s\\p{Punct}]", "");
