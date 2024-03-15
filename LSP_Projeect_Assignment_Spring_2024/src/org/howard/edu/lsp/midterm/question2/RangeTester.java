@@ -26,11 +26,17 @@ public class RangeTester {
         Range r2 = new IntegerRange(1, 4);
         Range r3 = new IntegerRange(2, 5);
         Range r4 = new IntegerRange(1, 5);
+        Range r5 = new IntegerRange(69, 99);
         System.out.println("R1 equals R2: " + r1.equals(r2)); // false
         System.out.println("R1 equals R3: " + r1.equals(r3)); // false
         System.out.println("R1 equals R4: " + r1.equals(r4)); // true
         System.out.println("R2 contains 6: " + r2.contains(6)); // false
         System.out.println("R3 contains 1: " + r3.contains(1)); // false
         System.out.println("R1 contains 1: " + r1.contains(1)); // true
+        System.out.println("R1 overlaps with R2: " + r1.overlaps(r2)); // true
+        System.out.println("R1 overlaps with R3: " + r1.overlaps(r3)); // true
+        System.out.println("R1 overlaps with R4: " + r1.overlaps(r4)); // true
+        System.out.println("R2 overlaps with R3: " + r2.overlaps(r3)); // true
+        System.out.println("R1 overlaps with R5: " + r1.overlaps(r5)); // false
     }
 }
