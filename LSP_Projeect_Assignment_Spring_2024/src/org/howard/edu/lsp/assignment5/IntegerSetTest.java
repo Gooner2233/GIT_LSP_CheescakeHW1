@@ -435,7 +435,7 @@ public class IntegerSetTest {
     }
 
     @Test
-    @DisplayName("Test case for largest method (empty set)")
+    @DisplayName("Test case for throwing exception largest method (empty set)")
     public void testLargestEmptySet() {
         IntegerSet set = new IntegerSet();
 
@@ -458,7 +458,7 @@ public class IntegerSetTest {
     }
 
     @Test
-    @DisplayName("Test case for smallest method (empty set)")
+    @DisplayName("Test case for throwing exception smallest method (empty set)")
     public void testSmallestEmptySet() {
         IntegerSet set = new IntegerSet();
 
