@@ -28,6 +28,31 @@ public class IntegerSetTest {
         set.add(3);
         assertEquals(3, set.length());
     }
+    
+    @Test
+    @DisplayName("Test case for add method")
+    public void testAddDuplicates() {
+        IntegerSet set = new IntegerSet();
+
+        // Test adding to an empty set
+        set.add(1);
+        assertTrue(set.contains(1));
+
+        // Test adding duplicate elements
+        set.add(1);
+        assertEquals(1, set.length());
+
+        // Test adding multiple elements
+        set.add(2);
+        set.add(3);
+        assertEquals(3, set.length());
+        set.add(3);
+        set.add(3);
+        set.add(3);
+        set.add(1);
+        set.add(2);
+        assertEquals(3, set.length());
+    }
 
     @Test
     @DisplayName("Test case for remove method")
@@ -42,6 +67,36 @@ public class IntegerSetTest {
         // Test removing an element not present in the set
         set.remove(4);
         assertEquals(2, set.length());
+    }
+    
+    @Test
+    @DisplayName("Test case for add method")
+    public void testRemoveIfNotFound() {
+        IntegerSet set = new IntegerSet();
+
+        // Test adding to an empty set
+        set.add(1);
+        assertTrue(set.contains(1));
+
+        // Test adding duplicate elements
+        set.add(1);
+        assertEquals(1, set.length());
+
+        // Test adding multiple elements
+        set.add(2);
+        set.add(3);
+        assertEquals(3, set.length());
+        
+        // Test removing the same number
+        // Should recognize the element is not in the set
+        // and nothing should happend
+        set.remove(3);
+        set.remove(3);
+        set.remove(3);
+        set.remove(1);
+        set.add(2);
+        assertEquals(1, set.length());
+        assertTrue(set.contains(2));
     }
     
     @Test
