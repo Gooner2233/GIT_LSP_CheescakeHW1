@@ -9,6 +9,7 @@ public class CreditCardPayment implements PaymentStrategy {
 
     @Override
     public void pay(double amount) {
+    	//Pay printing sugar
         System.out.println("Paid " + amount + " using credit card " + creditCardNumber);
     }
 }

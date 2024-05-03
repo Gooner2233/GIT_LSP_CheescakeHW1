@@ -8,6 +8,7 @@ public class ShoppingCart {
     }
 
     public void checkout(double amount) {
+    	//Pay printing sugar
         paymentStrategy.pay(amount);
     }
 }
